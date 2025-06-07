@@ -1,0 +1,103 @@
+{
+  "name": "langchain-chatbot-react-app",
+  "version": "1.0.0",
+  "description": "A flexible and customizable React chat component that supports context-aware conversations and document processing",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "umd": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "chatbot",
+    "langchain",
+    "ai",
+    "chat-component",
+    "document-processing",
+    "umd"
+  ],
+  "author": {
+    "name": "Abdullah Irfan",
+    "email": "abdullahirfandev@gmail.com",
+    "url": "https://github.com/AbdullahDev0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdullahDev0/langchain-chatbot-react-app.git"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.0.34",
+    "@langchain/openai": "^0.0.15",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "ai": "^3.0.2",
+    "langchain": "^0.1.25",
+    "lint-staged": "^15.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.4",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-min": "webpack --mode production",
+    "build:umd": "webpack --config webpack.umd.config.js",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "css-loader": "^6.10.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.2.5",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^4.9.5",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
+}
