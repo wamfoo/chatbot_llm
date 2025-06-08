@@ -1,5 +1,5 @@
 {
-  "name": "langchain-chatbot-react-app",
+  "name": "chatbot-test-william",
   "version": "1.0.0",
   "description": "A flexible and customizable React chat component that supports context-aware conversations and document processing",
   "private": false,
@@ -14,29 +14,17 @@
   "keywords": [
     "react",
     "chatbot",
-    "langchain",
     "ai",
     "chat-component",
     "document-processing",
     "umd"
   ],
-  "author": {
-    "name": "Abdullah Irfan",
-    "email": "abdullahirfandev@gmail.com",
-    "url": "https://github.com/AbdullahDev0"
-  },
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AbdullahDev0/langchain-chatbot-react-app.git"
-  },
   "peerDependencies": {
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
   },
   "dependencies": {
-    "@langchain/community": "^0.0.34",
-    "@langchain/openai": "^0.0.15",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -45,10 +33,9 @@
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "ai": "^3.0.2",
-    "langchain": "^0.1.25",
     "lint-staged": "^15.4.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0",
     "react-icons": "^5.0.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.4",
@@ -61,8 +48,7 @@
     "eject": "react-scripts eject",
     "build-min": "webpack --mode production",
     "build:umd": "webpack --config webpack.umd.config.js",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "prepare": "husky install"
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "eslintConfig": {
     "extends": [

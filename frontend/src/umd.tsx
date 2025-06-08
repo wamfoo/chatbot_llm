@@ -11,7 +11,7 @@ declare global {
 /**
  * mountApp: This function mounts (or re-mounts) your App into #root
  * with any config you want to pass. This will be exposed as a global
- * on `window.LangChainReactApp.mountApp` in the UMD build.
+ * on `window.ChatbotTest.mountApp` in the UMD build.
  */
 export function mountApp(config?: Record<string, any>) {
   const rootElement = document.getElementById("root");

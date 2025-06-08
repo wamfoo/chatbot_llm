@@ -1,9 +1,22 @@
 import { useState } from "react";
-import type { Message } from "ai/react";
-import type { AgentStep } from "langchain/schema";
+
+interface StepData {
+  action: {
+    tool: string;
+    toolInput: any;
+  };
+  observation: string;
+}
+
+interface Message {
+  id: string;
+  content: string;
+  createdAt: Date;
+  role: string;
+}
 
 export function IntermediateStep(props: { message: Message }) {
-  const parsedInput: AgentStep = JSON.parse(props.message.content);
+  const parsedInput: StepData = JSON.parse(props.message.content);
   const action = parsedInput.action;
   const observation = parsedInput.observation;
   const [expanded, setExpanded] = useState(false);
@@ -13,7 +26,7 @@ export function IntermediateStep(props: { message: Message }) {
     >
       <div
         className={`text-right ${expanded ? "w-full" : ""}`}
-        onClick={(e) => setExpanded(!expanded)}
+        onClick={() => setExpanded(!expanded)}
       >
         <code className="mr-2 bg-slate-600 px-2 py-1 rounded hover:text-blue-600">
           🛠️ <b>{action.tool}</b>
@@ -31,8 +44,8 @@ export function IntermediateStep(props: { message: Message }) {
             className={`opacity-0 max-h-[100px] overflow-auto transition ease-in-out delay-150 ${expanded ? "opacity-100" : ""}`}
           >
             Tool Input:
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             {JSON.stringify(action.toolInput)}
           </code>
         </div>

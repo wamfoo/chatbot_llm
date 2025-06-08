@@ -4,8 +4,8 @@ module.exports = {
   entry: './src/index.tsx', // Adjust if your entry file is different
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'langchain-react-app.min.js',
-    library: 'LangchainReactApp',
+    filename: 'chatbot-test-william.min.js',
+    library: 'ChatbotTest',
     libraryTarget: 'umd',
     globalObject: 'this',
   },

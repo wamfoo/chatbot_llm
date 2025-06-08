@@ -7,8 +7,8 @@ module.exports = {
   entry: './src/umd.tsx',   
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'langchain-react-app.umd.js',
-    library: 'LangChainReactApp',   
+    filename: 'chatbot-test-william.umd.js',
+    library: 'ChatbotTest',   
     libraryTarget: 'umd',           
     globalObject: 'this',           
   },
