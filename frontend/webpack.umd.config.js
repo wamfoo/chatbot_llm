@@ -19,7 +19,14 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        // use: 'ts-loader',
+        use: {
+          loader: 'ts-loader',
+          options: {
+            // configFile: 'tsconfig.umd.json',
+            transpileOnly: true,
+          },
+        },
         exclude: /node_modules/,
       },
       {

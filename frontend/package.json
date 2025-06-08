@@ -1,6 +1,6 @@
 {
   "name": "chatbot-test-william",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "A flexible and customizable React chat component that supports context-aware conversations and document processing",
   "private": false,
   "main": "dist/index.js",
@@ -9,6 +9,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
+    "build",
     "README.md"
   ],
   "keywords": [
@@ -32,10 +33,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
-    "ai": "^3.0.2",
     "lint-staged": "^15.4.3",
-    "react": ">=18.2.0",
-    "react-dom": ">=18.2.0",
     "react-icons": "^5.0.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.4",
@@ -43,11 +41,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "clean": "rm -rf build dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-min": "webpack --mode production",
+    "build:js": "tsup",
+    "build:types": "tsc",
     "build:umd": "webpack --config webpack.umd.config.js",
+    "build:all": "npm run clean && npm run build:js && npm run build:umd",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "eslintConfig": {
@@ -72,11 +72,13 @@
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
+    "@swc/core": "^1.11.31",
     "css-loader": "^6.10.0",
     "husky": "^8.0.3",
     "prettier": "^3.2.5",
     "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",
+    "tsup": "^8.5.0",
     "typescript": "^4.9.5",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
