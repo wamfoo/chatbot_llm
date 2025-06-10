@@ -36,7 +36,7 @@ function App({
       chatIcon={chatIcon}
       placeholder={placeholder || "Ask a question..."}
       titleText={titleText || "Chatbot"}
-    ></ChatWindow>
+    />
   );
 }
 

@@ -1,12 +1,19 @@
 {
   "name": "chatbot-test-william",
-  "version": "1.0.9",
+  "version": "1.0.14",
   "description": "A flexible and customizable React chat component that supports context-aware conversations and document processing",
   "private": false,
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "umd": "dist/index.umd.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "style": "dist/style.css",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
   "files": [
     "dist",
     "build",
@@ -46,8 +53,9 @@
     "eject": "react-scripts eject",
     "build:js": "tsup",
     "build:types": "tsc",
+    "build:app": "webpack --config webpack.config.js --mode=production",
     "build:umd": "webpack --config webpack.umd.config.js",
-    "build:all": "npm run clean && npm run build:js && npm run build:umd",
+    "build:all": "npm run clean && npm run build:js && npm run build:app && npm run build:umd",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "eslintConfig": {
@@ -73,8 +81,9 @@
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
     "@swc/core": "^1.11.31",
-    "css-loader": "^6.10.0",
+    "css-loader": "^6.11.0",
     "husky": "^8.0.3",
+    "mini-css-extract-plugin": "^2.9.2",
     "prettier": "^3.2.5",
     "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",

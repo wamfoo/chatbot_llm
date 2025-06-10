@@ -1,6 +1,6 @@
-export async function fetchChatbotResponse(message: string): Promise<string> {
+export async function fetchChatbotResponse(endpoint: string, message: string): Promise<string> {
     try {
-        const response = await fetch("http://localhost:8000/chatbot", {
+        const response = await fetch(endpoint, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

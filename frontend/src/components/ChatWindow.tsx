@@ -100,7 +100,7 @@ export function ChatWindow(props: {
     setChatEndpointIsLoading(true);
 
     try {
-      const response = await fetchChatbotResponse(newMessage.content);
+      const response = await fetchChatbotResponse(endpoint, newMessage.content);
       if (response) {
         const aiMessage = {
           id: "bot" + crypto.randomUUID(),

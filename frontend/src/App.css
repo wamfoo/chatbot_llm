@@ -53,7 +53,7 @@ body {
 }
 
 .message-bubble-user {
-  background-color: #0284c7;
+  background-color: #033E7D;
   margin-left: auto;
   color: #f7f8fa;
 }
@@ -99,19 +99,19 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #0284c7;
+  background-color: #033E7D;
   border-radius: 50%;
   margin: 10px;
   border: none;
   cursor: pointer;
   font-size: 48px;
-  color: white;
+  color: #033E7D;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  background-color: #0284c7;
+  background-color: #033E7D;
 }
 
 .input-field {
@@ -166,7 +166,7 @@ body {
 }
 
 .chat-header {
-  background-color: #0284c7;
+  background-color: #033E7D;
   padding: 10px 20px;
   color: #fff;
   font-weight: bold;

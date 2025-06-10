@@ -1,4 +1,6 @@
 src/
+public/
+node_modules/
 .github/
 .husky/
 .vscode/
