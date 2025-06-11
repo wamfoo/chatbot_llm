@@ -1,6 +1,6 @@
 {
   "name": "chatbot-test-william",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "A flexible and customizable React chat component that supports context-aware conversations and document processing",
   "private": false,
   "main": "dist/index.js",
